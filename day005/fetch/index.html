@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Fetch</title>
+</head>
+<body>
+  <script>
+    // const xhr = new XMLHttpRequest()
+    // xhr.responseType = 'json'
+    // xhr.onreadystatechange = () => {
+    //   if (xhr.readyState === 4) {
+    //     if (xhr.status >=200 && xhr.status < 300) {
+    //       console.log(xhr.response)
+    //     }
+    //   }
+    // }
+    // xhr.open('GET', './userInfo.json', true)
+    // xhr.send(null)
+    fetch('./userInfo.json').then(response => response.json()).then(info => console.log(info))
+  </script>
+</body>
+</html>
